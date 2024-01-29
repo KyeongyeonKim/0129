@@ -17,9 +17,10 @@ function App() {
       <ul>
         {/* TODO: map을 사용해서 filteredStudents를 여기에 렌더링하세요. */}
         {/* TODO: 학생이름을 클릭하면 나이와 점수가 alert 돼야 해요.*/}
-        {filteredStudents.map((student) => {
+        {filteredStudents.map((student, idx) => {
           return (
             <li
+              key={idx}
               onClick={() => {
                 alert(`${student.age} - ${student.grade}`);
               }}
